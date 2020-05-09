@@ -20,6 +20,6 @@ form {
 
 .bookmark {
     display: flex;
-    flex-direction: column;
-    background-color: cornflowerblue;
+    flex-direction: row;
+    margin: 10px;
 }

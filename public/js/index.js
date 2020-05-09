@@ -56,7 +56,7 @@ function fetchBookmarks() {
             results.innerHTML = "";
             for ( let i = 0; i < responseJSON.length; i ++ ){
                 document.querySelector(".results").innerHTML += `
-                    <div class="item">
+                    <div class="bookmark">
                         <p>
                             ID: ${responseJSON[i].id}
                         </p>

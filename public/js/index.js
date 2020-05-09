@@ -8,6 +8,7 @@ function addBookmarkFetch(title, description, burl, rating) {
         url : burl,
         rating : Number(rating)
     }
+    console.log(API_TOKEN);
     let settings = {
         method : 'POST',
         headers : {

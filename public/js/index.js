@@ -100,9 +100,6 @@ function DeleteBookmarkFetch(id){
             throw new Error( response.statusText );
         })
 
-        .then( responseJSON => {
-            fetchBookmarks();
-        })
         .catch( err => {
             results.innerHTML = `<div> ${err.message} </div>`;
         });
@@ -112,6 +109,7 @@ function UpdateBookmarkFetch(bid,title,description,burl,rating) {
     let url = '/bookmark/' + bid;
 
     let data = {
+        id : bid,
         title : title,
         description : description,
         url : burl,
@@ -146,7 +144,7 @@ function UpdateBookmarkFetch(bid,title,description,burl,rating) {
 
 function SearchBookmarkFetch(serchTitle){
     let url = '/bookmark?title='+serchTitle;
-    
+    console.log(url);
     let settings = {
         method : 'GET',
         headers : {

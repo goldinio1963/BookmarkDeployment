@@ -55,7 +55,24 @@ function fetchBookmarks() {
         .then( responseJSON => {
             results.innerHTML = "";
             for ( let i = 0; i < responseJSON.length; i ++ ){
-                results.innerHTML += `<div> ${responseJSON[i].title} </div>`;
+                document.querySelector(".results").innerHTML += `
+                    <div class="item">
+                        <p>
+                            ID: ${responseJSON[i].id}
+                        </p>
+                        <p>
+                            Title: ${responseJSON[i].title}
+                        </p>
+                        <p>
+                            Description: ${responseJSON[i].description}
+                        </p>
+                        <p>
+                            URL: ${responseJSON[i].url}
+                        </p>
+                        <p>
+                            Rating: ${responseJSON[i].rating}
+                        </p>
+                    </div>`;
             }
         })
         .catch( err => {

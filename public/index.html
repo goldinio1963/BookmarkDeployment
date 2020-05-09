@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Bookmark App</title>
+        <link href="./css/index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <!-- getall -->
+        <form class="Bookmark-form">
+            <label>
+                Click the buttton to get the full list of bookmarks
+            </label>
+            <button id="submit-btn" type="submit">
+                Bookmarks
+            </button>
+        </form>
+        <!-- post -->
+        <form class="add-bookmark-form">
+            <label for="bookmarkID">
+                ID:
+            </label>
+            <input type="text" id="bookmarkID" />
+
+            <label for="bookmarkTitle">
+                Title:
+            </label>
+            <input type="text" id="bookmarkTitle" />
+            
+            <label for="bookmarkDescription">
+                Description:
+            </label>
+            <input type="text" id="bookmarkDescription" />
+            
+            <label for="bookmarkURL">
+                URL:
+            </label>
+            <input type="text" id="bookmarkURL" />
+
+            <label for="bookmarkRating">
+                Rating:
+            </label>
+            <input type="number" id="bookmarkRating" />
+
+            <button type="submit">
+                Add Bookmark
+            </button>
+        </form>
+        <!-- delete -->
+        <form class="delete-bookmark-form">
+            <label for="deletebookmarkID">
+                ID to delete bookmark:
+            </label>
+            <input type="text" id="deletebookmarkID" />
+        </form>
+        <!-- patch -->
+        <form class="patch-bookmark-form">
+
+            <label for="paramPatchBookmarkID">
+                ID to update:
+            </label>
+            <input type="text" id="paramPatchBookmarkID">
+
+            <label for="patchbookmarkTitle">
+                Edit Title:
+            </label>
+            <input type="text" id="patchbookmarkTitle" />
+            
+            <label for="patchbookmarkDescription">
+                Edit Description:
+            </label>
+            <input type="text" id="patchbookmarkDescription" />
+            
+            <label for="patchbookmarkURL">
+                Edit URL:
+            </label>
+            <input type="text" id="patchbookmarkURL" />
+
+            <label for="patchbookmarkRating">
+                Edit Rating:
+            </label>
+            <input type="number" id="patchbookmarkRating" />
+
+            <button type="submit">
+                Update Bookmark
+            </button>
+        </form>
+        <!-- getonebookmark -->
+        <form class="getone-bookmark-form">
+            <label for="GetTitle">
+                Title of the bookmark:
+            </label>
+            <input type="text" id="GetTitle">
+        </form>
+        <!-- section -->
+        <section class="results">
+        </section>
+        <script src="./js/index.js"></script>
+    </body>
+</html>

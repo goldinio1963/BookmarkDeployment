@@ -240,7 +240,7 @@ function watchOneBookmarkForm(){
 
     submitbotton.addEventListener('submit', (event) => {
         event.preventDefault();
-        let serchTitle = document.getElementById('GetTitle')
+        let serchTitle = document.getElementById('GetTitle').value
         SearchBookmarkFetch(serchTitle);
     })
 }

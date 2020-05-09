@@ -1,9 +1,8 @@
 const API_TOKEN = '2abbf7c3-245b-404f-9473-ade729ed4653'
 
-function addBookmarkFetch(id, title, description, burl, rating) {
+function addBookmarkFetch(title, description, burl, rating) {
     let url = '/bookmarks';
     let data = {
-        id : id,
         title : title,
         description : description,
         url : burl,
@@ -176,12 +175,11 @@ function watchAddBookmarkForm() {
 
     submitbotton.addEventListener( 'submit' , ( event ) => {
         event.preventDefault();
-        let id = document.getElementById( 'bookmarkID' ).value;
         let title = document.getElementById( 'bookmarkTitle' ).value;
         let description = document.getElementById('bookmarkDescription').value;
         let url = document.getElementById('bookmarkURL').value;
         let rating = document.getElementById('bookmarkRating').value;
-        addBookmarkFetch( id, title, description, url, rating );
+        addBookmarkFetch(title, description, url, rating );
     })
 }
 

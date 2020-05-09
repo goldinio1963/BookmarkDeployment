@@ -11,15 +11,10 @@
   
 form {
     margin: 16px 0;
+    border: 1 solid black;
 }
 
 .results{
     display: flex;
-    border: 1 solid black;
-}
-
-.bookmark {
-    display: flex;
     flex-direction: row;
-    margin: 10px;
 }

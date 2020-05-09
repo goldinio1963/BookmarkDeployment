@@ -226,7 +226,7 @@ function watchUpdateForm(){
 
     submitbotton.addEventListener('submit', (event) => {
         event.preventDefault();
-        let bid = document.getElementById( 'bodyPatchBookmarkID' ).value;
+        let bid = document.getElementById( 'paramPatchBookmarkID' ).value;
         let title = document.getElementById( 'patchbookmarkTitle' ).value;
         let description = document.getElementById('patchbookmarkDescription').value;
         let url = document.getElementById('patchbookmarkURL').value;

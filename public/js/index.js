@@ -144,6 +144,7 @@ function UpdateBookmarkFetch(bid,title,description,burl,rating) {
 
 function SearchBookmarkFetch(serchTitle){
     let url = '/bookmark?title='+serchTitle;
+    console.log(serchTitle);
     console.log(url);
     let settings = {
         method : 'GET',

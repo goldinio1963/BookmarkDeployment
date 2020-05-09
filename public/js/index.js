@@ -109,7 +109,7 @@ function DeleteBookmarkFetch(id){
 }
 
 function UpdateBookmarkFetch(bid,title,description,burl,rating) {
-    let url = '/bookmark/' + id;
+    let url = '/bookmark/' + bid;
 
     let data = {
         title : title,
@@ -145,19 +145,13 @@ function UpdateBookmarkFetch(bid,title,description,burl,rating) {
 }
 
 function SearchBookmarkFetch(serchTitle){
-    let url = '/bookmark';
+    let url = '/bookmark?title='+serchTitle;
     
-    let data = {
-        title : serchTitle
-    };
-
     let settings = {
         method : 'GET',
         headers : {
             Authorization : `Bearer ${API_TOKEN}`,
-            'Content-Type' : 'application/json'
         },
-        body : JSON.stringify(data)
     }
     let results = document.querySelector( '.results' );
     fetch( url, settings )
@@ -170,7 +164,24 @@ function SearchBookmarkFetch(serchTitle){
         .then( responseJSON => {
             results.innerHTML = "";
             for ( let i = 0; i < responseJSON.length; i ++ ){
-                results.innerHTML += `<div> ${responseJSON[i].name} </div>`;
+                document.querySelector(".results").innerHTML += `
+                    <div class="bookmark">
+                        <p>
+                            ID: ${responseJSON[i].id}
+                        </p>
+                        <p>
+                            Title: ${responseJSON[i].title}
+                        </p>
+                        <p>
+                            Description: ${responseJSON[i].description}
+                        </p>
+                        <p>
+                            URL: ${responseJSON[i].url}
+                        </p>
+                        <p>
+                            Rating: ${responseJSON[i].rating}
+                        </p>
+                    </div>`;
             }
         })
         .catch( err => {

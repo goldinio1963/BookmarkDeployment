@@ -19,6 +19,7 @@ form {
 }
 
 .item {
+    border-top: 1px solid crimson;
     margin: 10px;
     border: 1px solid black;
 }

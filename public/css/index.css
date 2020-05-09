@@ -11,10 +11,14 @@
   
 form {
     margin: 16px 0;
-    border: 1 solid black;
+    border: 1px solid black;
 }
 
 .results{
-    display: flex;
-    flex-direction: row;
+    border: 1px solid black;
+}
+
+.item {
+    margin: 10px;
+    border: 1px solid black;
 }
